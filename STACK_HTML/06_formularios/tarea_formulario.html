@@ -1,0 +1,79 @@
+<!-- Tarea formulario: Crear un formulario de registro
+para un sitio web para reservar una hora al doctor,
+Debe incluir: Nombre del paciente, fecha de cita,
+Fecha nacimiento, Sintomas del paciente, Ciudad (Lista desplegable)
+Casilla de verificacion-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario para Cita:</h1>
+    <hr>
+    <h4>Porfavor rellene los siguientes campos:</h4>
+    <form action="#" method="POST">
+        <div>
+            <label for="nombre"><strong>Nombre del Paciente:</strong></label><br>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresar nombre completo">
+        </div>
+        <br>
+        <div>
+            <label for="fecha_cita"><strong>Fecha de la Cita:</strong></label><br>
+            <input type="date" id="fecha_cita" name="fecha_cita">
+        </div>
+        <br>
+        <div>
+            <label for="fecha_nacimiento"><strong>Fecha de nacimiento:</strong></label><br>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        </div>
+        <br>
+        <div>
+            <label for="Sintomas"><strong>Sintomas del Paciente:</strong></label><br>
+            <textarea id="Sintomas" name="Sintomas" rows="4" cols="30" required placeholder="Paciente con fiebre, tos... Etc..."></textarea>
+        </div>
+        <br>
+            <label for="correo"><strong>Correo Electronico:</strong></label><br>
+            <input type="text" id="correo" name="correo" required placeholder="correo@gmail.com">
+        <br><br>
+        <div>
+            <label for="Ciudad"><strong>Ciudad del Paciente:</strong></label><br>
+            <select id="Ciudad" name="Ciudad">
+                <option value="santiago">Santiago</option>
+                <option value="viña">Viña del Mar</option>
+                <option value="valparaiso">Valparaiso</option>
+                <option value="coquimbo">Coquimbo</option>
+                <option value="serena">La Serena</option>
+                <option value="copiapo">Copiapo</option>
+                <option value="antofagasta">Antofagasta</option>
+                <option value="atacama">Atacama</option>
+                <option value="calama">Calama</option>
+                <option value="iquique">Iquique</option>
+                <option value="arica">Arica</option>
+                <option value="rancagua">Rancagua</option>
+                <option value="talca">Talca</option>
+                <option value="chillan">Chillan</option>
+                <option value="concepcion">Concepcion</option>
+                <option value="pucon">Pucon</option>
+                <option value="puertov">Puerto Varas</option>
+                <option value="puertom">Puerto Montt</option>
+                <option value="islac">Isla de Chiloe</option>
+                <option value="puertoc">Puerto Chacabuco</option>
+                <option value="coihaique">Coihaique</option>
+                <option value="torresp">Torres del Paine</option>
+                <option value="puerton">Puerto Natales</option>
+                <option value="puntaar">Punta Arenas</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="acepto" name="acepto">
+            <label for="acepto">Acepto los términos y condiciones</label> --- <input type="submit" value="Enviar">
+        </div> 
+        <hr>
+    </form>
+</body>
+</html>

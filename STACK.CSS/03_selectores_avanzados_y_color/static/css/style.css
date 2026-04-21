@@ -1,0 +1,79 @@
+* {
+    /*selector comodín selecciona todos los elementos html*/
+    /*outline: 1px dashed crimson;*/
+    /*linea externa de 1 pixel*/
+    margin: 0;
+    /*formatea espacios externos*/
+    padding: 0;
+    /*formatea espacios internos*/
+    box-sizing: border-box;
+}
+
+/*considera bordes dentro del tamaño de elementos html*/
+h1 {
+    color: rebeccapurple;
+}
+
+.green {
+    color: mediumseagreen;
+}
+
+#red {
+    color: tomato;
+}
+
+.quote p {
+    color: darkslategray;
+    font-style: italic;
+}
+
+.quote h4 {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+.header > img {
+    height: 70px;
+}
+#container p {/*seleccion de parrafo dentro del contenedor*/
+font-size: 16px;/*tamaño de letra*/
+background-color: #444;/*color de fondo*/
+color: white/*color de letra dentro del fondo*/
+}
+
+#container p.highlight {
+font-weight: bold;
+color: gold;
+}
+
+form{padding: 20px}
+input[type="text"] {
+border: 2px solid royalblue;
+}
+
+input[type="submit"] {
+color: white;
+background-color: mediumvioletred;
+border: none;
+padding: 5px 20px;
+cursor: pointer;
+}
+
+
+.color_nombre{
+    color: red;
+    background-color:aqua;
+}
+.color_rgb{
+    color:#4f17b8;
+    background-color:black
+}
+.color_hex{
+    color:#d2d2d2;
+    background-color:yellow;
+}

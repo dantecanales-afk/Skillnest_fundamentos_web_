@@ -1,0 +1,14 @@
+h1 {
+    color: rebeccapurple;
+}
+p {
+    color: goldenrod;
+}
+/*seleccion a traves de clases (.)*/
+.rojo {
+    color: red;
+}
+/*seleccion a traves de id (#)*/
+#amarillo {
+    color: yellow;
+}
