@@ -1,0 +1,30 @@
+*{
+    padding: 10p;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+.encabezado{
+width: 100%;
+background-color: gray;
+}
+.titulo_header{
+    text-align: center;
+    color: wheat;
+}
+.conteiner{
+    outline: solid 1px;
+    margin: 0 auto;
+    width: 900px;
+    padding: 20px;
+}
+.aceptar{
+    width: 100px;
+    height: 50px;
+} 
+.caja{
+    width: 600px;
+    height: 250px;
+    background-color: rgb(251, 255, 0);
+}
