@@ -1,0 +1,86 @@
+.contenedor {
+      text-align: center;
+      outline: solid rebeccapurple;
+}
+
+.tarjeta {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background-color: rgb(133, 15, 201);
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+}
+
+/*DIVISION*/
+
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+}
+/*header*/
+.header{
+      background-color: #333;
+      color: white;
+      padding: 90px;
+      text-align: center;
+}
+.menu {
+      margin-top: 20px;
+
+}
+.boton{
+      display: inline-block;
+      background-color: #555;
+      color: white;
+      text-decoration: none; /*quita subrayados*/
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+}
+.boton:hover{
+      background-color: dimgrey;
+}
+.contenedorPrincipal{
+      padding: 20px 25px;
+
+}
+.resaltado{
+      display: inline;/*queda en linea*/
+      background-color: pink;
+      font-weight: bold;/*negrita*/
+}
+.contenedorTarjetas{
+      text-align: center;
+      padding: 20px;
+
+}
+.box{
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background-color: rgb(2, 173, 196);
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+}
+.bloque{
+      display: block;/*linea en columnas*/
+      background-color: tomato;
+      color: white;
+      margin: 20px;
+      padding: 15px;
+}
+.footer{
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+}

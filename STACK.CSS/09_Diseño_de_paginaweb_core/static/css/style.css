@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*HEADER*/
+.header{
+    background-color: #173353;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+height: 150px;
+}
+
+.menu{
+    margin-top: 10px;
+    height: 50px;
+    background-color: #204875;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 0;
+}
+.boton{
+    display: inline-block;
+    color: #E7EBF0;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.contenedor_principal{
+    padding: 30px 50px;
+}
+
+.contenedor_tarjetas{
+text-align: center;
+padding: 20px;
+}
+.box{
+    display: inline-block;
+    text-align: center;
+    height: 150px;
+    width: 300px;
+    background-color: #00A4DE;
+    color: #FCFEFF;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.bloque{
+    display: block;
+    background-color: #204875;
+    color: #F7F9FA;
+    margin: 10px;
+    padding: 15px;
+}
+
+.titulo_de_bloque{
+    text-align: center;
+    padding-top: 20px;
+}
+.parrafo1{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.parrafo_principal{
+    padding-top: 10px;
+}
+
+.titulo{
+    padding-top: 30px;
+}
+
+.parrafo_caja{
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.titulo_caja{
+    
+    
+}

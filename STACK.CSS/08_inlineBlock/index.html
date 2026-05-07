@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Dante Canales">
+    <title>Ejemplo mini sitio con inlineblock</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Mi sitio web</h1>
+        <na class="menu">
+            <a href="" class="boton">Inicio</a>
+            <a href="" class="boton">Servicio</a>
+            <a href="" class="boton">Contacto</a>
+        </na>
+    </header>
+    <main class="contenedorPrincipal">
+        <!--texto con elemnto inline-->
+        <section>
+            <h2>texto con elemnto inline</h2>
+            <p>esto es un texto donde usamos <span class="resaltado">inline</span> para resaltar texto sin romper la linea de parrafo</p>
+        </section>
+        <!--tarjeta inline-->
+        <section class="contenedorTarjetas">
+        <h2>tarjetas inlineblock</h2>
+        <div class="box">tarjeta1</div>
+        <div class="box">tarjeta2</div>
+        <div class="box">tarjeta3</div>
+        </section>
+        <!--bloques block-->
+        <section>
+            <h2>Bloques (block)</h2>
+            <div class="bloque">bloque1</div>
+            <div class="bloque">bloque2</div>
+            <div class="bloque">bloque3</div>
+        </section>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+        <p>2026 todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
