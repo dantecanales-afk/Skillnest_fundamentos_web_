@@ -15,9 +15,7 @@ body{
     color: white;
     text-align: center;
     padding: 30px 0px;
-    margin-bottom: 20px;
     width: 100%;
-    
 }
 
 .header h1{
@@ -30,13 +28,13 @@ font-weight: 500;
 .cajablanca{
     width: 94.5%;
     margin-left: 40px;
-    padding: 190px 5px ;
+    padding: 190px 0px ;
+    
     background-color: #c7c7c7;
     flex-wrap: wrap;
     margin-top: 50px;
-    justify-content: center;
-    box-shadow: 5pc;
-    
+    box-shadow: 5px;
+    margin-bottom: 100px;
 }
 
 .caja1{
