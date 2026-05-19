@@ -1,0 +1,75 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+   font-family: 'Impact', sans-serif;
+   color: #fff;
+}
+
+/* Barra de navegación */
+.navbar {
+   background-color: #c51162;
+   padding: 15px 40px;
+   /* Flexbox */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* Logo */
+.logo a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 24px;
+   text-transform: uppercase;
+   /* Flexbox */
+   display: flex;
+   align-items: center;
+   transition: transform 0.3s ease, margin-left 1s ease;
+   
+
+}
+
+/* Icono logo */
+.logo i {
+   margin-right: 8px;
+   font-size: 28px;
+   color: #fff;
+}
+
+.logo a:hover{
+    background-color: #ff09ff;
+   color: #ffffff;
+   margin-left: 100px;
+   transform: scale(1.2);
+   border-radius: 20px;
+
+}
+/* Navegación */
+.nav-links {
+   /* Flex */
+   display: flex;
+   gap: 20px;
+}
+
+.nav-links a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 8px 12px;
+   border-radius: 5px;
+   transition: transform 0.1s;
+}
+
+/* Efecto hover */
+.nav-links a:hover {
+   background-color: #fff;
+   color: #db2d7c;
+   transform: scale(1.1);/*1 agrega 10% de escala*/
+   border-radius: 20px;
+
+}

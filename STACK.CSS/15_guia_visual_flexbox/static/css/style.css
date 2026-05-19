@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gainsboro;
+}
+.header{
+   background-color: #1e293b;
+   color: white;
+   text-align: center;
+   padding: 30px;
+}
+.nav{
+background-color: #334155;
+padding: 15px;
+display: flex;
+justify-content: center;
+gap: 50px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main{
+    padding: 30px;
+}
+.seccion{
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px gray;
+
+}
+
+.contenedor{
+    background-color: rgb(202, 207, 211);
+    height: 200px;
+    border: 3px dashed #94a3b8;
+    margin-top: 20px;
+    display: flex;
+    
+}
+.cajas{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(85, 6, 131);
+    font-weight: bold;
+    border-radius: 10px;
+    /*display flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ejemplo1*/
+/*justify content + gap*/
+
+.ejemplo1{
+    justify-content: center;/*centrar contenido*/
+    gap: 20px;
+}
+/*ejemplo2*/
+/*align item + gap*/
+.ejemplo2{
+    align-items: center;
+    gap: 20px;
+}
+.ejemplo3{
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.ejemplo4{
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.cajagrande{
+    width: 80px;
+    height: 100px;
+
+}
+
+
+.ejemplo5{
+    align-items: center;
+    justify-content: center;
+
+}

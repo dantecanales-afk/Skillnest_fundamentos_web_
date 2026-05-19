@@ -1,0 +1,49 @@
+/* Estilos generales */
+body {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 20px;
+    font-size: 18px;
+    justify-content: center;
+    
+}
+/* Estilos generales para columnas */
+.col {
+    display: flex;
+    height: 50px;
+    background-color: #87CEEB ;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Ajuste de tamaños específicos */
+.col-2 {
+    background-color: #87CEEB ;
+    flex: 2;
+}
+
+.col-3 {
+    background-color: #87CEEB ;
+    flex: 3;
+}
+.row div:hover{
+    background-color: #f70c7a;
+    color: #ffffff;
+    transform: scale(1.1);/*1 agrega 10% de escala*/
+    border-radius: 20px;
+    margin-bottom: 5px;
+    transition: transform 0.1s;
+}
