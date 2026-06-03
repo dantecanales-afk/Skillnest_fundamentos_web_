@@ -10,6 +10,19 @@
 // Luego mostrar:
 // Descuento aplicado
 // Total a pagar
+function ejercicio1(){
+    let nombre = prompt("Ingrese su nombre")
+    let monto = parseInt(prompt("Ingrese el monto de compra"))
+    if (monto >= 50000){
+        alert(`${nombre} El monto con descuento es: ${monto - (monto * 0.2)}`)}
+    else if (monto >= 30000){
+        alert(`${nombre} El monto con descuento es: ${monto - (monto * 0.1)}`)}
+    else if (monto <=30000 && monto > 0){
+        alert(`${nombre} El monto final es ${monto}. Sin descuento`)}
+    else{
+        alert(`${nombre} Ingrese valores validos`)
+    }
+}
 
 
 // ✅ Ejercicio 2: Acceso a evento

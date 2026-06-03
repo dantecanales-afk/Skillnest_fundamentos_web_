@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dante Canales">
+    <title>posciciones css</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    <header>
+    <nav class="barra-navegacion">
+        <h1>position: static</h1>
+        <a href="#" class="enlace-nav">haz scroll hacia abajo⬇️</a>
+    </nav>
+    </header>
+    <main class="contenedor-principal">
+        <section class="tarjeta">
+            <h2>1. position: static</h2>
+            <p class="explicacion">el bloque oscuro tiene <code>top:40px</code> en el codigo, pero al ser <b>static</b>, ignora la orden y se queda en la fila</p>
+            <div class="bloque-normal">bloque 1</div>
+            <div class="bloque-estatico">bloque 2 (intento moverse)</div>
+            <div class="bloque-normal">bloque 3</div>
+        </section>
+        <section class="tarjeta">
+            <h2>2. position: relative</h2>
+            <p class="explicacion">el bloque se movio 25px hacia abajo, pero <b>dejo hueco</b>(el molde puntuado) que impide subir el bloque 3.
+            <div class="bloque-normal">bloque 1</div>
+            <div class="bloque-fantasma"><div class="bloque-relativo">bloque 2(se movio)</div></div>
+            <div class="bloque-normal">bloque 3</div>
+        </section>
+        <section class="tarjeta">
+            <h2>position: absolute</h2>
+            <p class="explicacion">el boton rojo (x) flota anclado a la eesquina de su contenedor (relative), <b>sin estorbar ni empujar</b> al texto</p>
+            <div class="ventana-moral">
+                <div class="boton-cerrar">X</div>
+                <p style="color: gray; font-size: 1rem;">soy el contenido de una ventana, la X rota encima de mi gracias a mi condicion absoluta (position:absolute).</p>
+            </div>
+            
+            
+        </section>
+
+    </main>
+</body>
+</html>

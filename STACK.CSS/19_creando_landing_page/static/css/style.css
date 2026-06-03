@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.inicio {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.titulo h1{
+    font-size: 60px;
+    flex: 1;
+}
+.link {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
+}
+
+.pigger {
+    background-color: #3A6CEB;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 85px;
+    transition: transform 0.5s ease-out;
+}
+
+.pigger:hover{
+    transform: scale(1.1);
+}
+.blue {
+    color: blue;
+}
+.rata{
+    background-color:#F5F8FE;
+    display:flex;
+}
+.medio{
+    margin:70px;
+    padding:20px;
+}
+.img{
+    padding:40px;
+}
+.citi{
+    background-color:#3B6FEB;
+    width:160px;
+    height:60px;
+    border-radius:10px;
+    color:white;
+    border: none;
+    margin:10px;
+    font-size:15px;
+    transition: transform 0.5s ease-out;
+}
+.citi:hover{
+    transform: scale(1.1);
+}
+.medio a{
+    text-decoration:none;
+    color:#3A6DEA;
+    font-size:25px;
+}
+.medio p{
+    margin:30px;
+    font-size:30px;
+}
+.ultimo{
+    display: flex;
+    margin-top:30px;
+    justify-content: space-between;
+    text-align: center;
+    padding:45px;
+
+}
+.imagenes{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+.imagenes img{
+    margin: 0 auto;
+    width:90px;
+    height:90px;
+}
+.tatata{
+    display: flex;
+    justify-content: center;
+    margin:40px;
+}
+.parrafos{
+    margin:10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.casiultimo{
+    background-color:#F5F8FD;
+    padding:85px;
+    text-align: center;
+    margin:20px;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.titi{
+    background-color:#3B6FEB;
+    width:160px;
+    height:60px;
+    border-radius:10px;
+    color:white;
+    border: none;
+    margin:10px;
+    font-size:15px;
+    transition: transform 0.5s ease-out;
+}
+
+.titi:hover{
+    transform: scale(1.1);
+}
+.footer{
+    background-color:#F5F8FD;
+    padding:40px;
+    font-size:20px;
+
+}
+.tt{
+    font-size:15px;
+    margin:10px;
+    color:rgb(61, 60, 60);
+}
+.aa{
+    display: flex;
+    gap:30px;
+    justify-content: right;
+
+
+}
+.aa a{
+    text-decoration: none;
+    color:black;
+}
+.negrita{
+    font-weight: bold;
+}
