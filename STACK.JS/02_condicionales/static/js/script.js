@@ -47,6 +47,22 @@ function ejercicio1(){
 // Si la temperatura supera los 35 grados, mostrar una alerta adicional:
 //  “Temperatura extrema”.
 
+function ejercicio3() {
+    
+    let temperatura =  parseInt(prompt("ingresa la temperatura actual;"))
+    if (temperatura < 10 && temperatura > -30) {
+    mensaje = "hace frio"
+    }
+    else if (temperatura >=10 && temperatura <= 24) {
+    mensaje = "temperatura agradable"
+    }
+    else{
+        mensaje ="hace calor"
+    }
+    
+    
+}
+
 // ✅ Ejercicio 4: Verificación de administrador
 // 📝 Enunciado
 // Solicitar:
@@ -59,6 +75,18 @@ function ejercicio1(){
 // Si ambos son correctos → “Bienvenido administrador”
 // Si usuario es correcto pero contraseña incorrecta → “Contraseña incorrecta”
 // Si usuario no existe → “Usuario no encontrado”
+function ejercicio4() {
+    let usuario = prompt("Ingrese su nombre de usuario:");
+    let contraseña = prompt("ingrese su contraseña");
+
+    if (usuario === "admin" && contraseña === "1234"){
+        alert("bienvenido administrador")
+    } else if (usuario === "admin") {
+        alert("Contraseña incorrecta");
+    } else{
+        alert(`usuario ${usuario} no encontrado`)
+    }
+}
 
 // ✅ Ejercicio 5: Sistema de aprobación
 // 📝 Enunciado
@@ -75,7 +103,16 @@ function ejercicio1(){
 // Además:
 // Si alguna nota es menor a 2.0 mostrar:
 //  “Debe asistir a reforzamiento”.
-
+function ejercicio5(){
+    let nombreEstudiante ="dantesillo"
+    let nota1 = parseInt(prompt("ingresa nota:"))
+    let nota2 = parseInt(prompt("ingresa nota:"))
+    let nota3 = parseInt(prompt("ingresa nota:"))
+    let promedio = (nota1+nota2+nota3) / 3
+    if (promedio >= 6.0 && (nota1<2.0 || nota2 < 2.0 || nota3 < 2.0)){
+        alert (`el estudiante ${nombreEstudiante} tiene un promedio de ${promedio} y reprobo`)
+        }
+}
 // 📌 Requisitos Técnicos
 // Cada ejercicio debe:
 // Tener su propia función JavaScript
