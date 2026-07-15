@@ -38,9 +38,9 @@ function cargando(){
 function calcularDescuento(){
 
     for(let i = 1; 1 <=5; i++){
-        let valorProducto = parseInt(prompt("ingrese el valor del producto"));
-        alert(`producto ${i} - descuento aplicado: ${1 * 5} %
-            \nValor final: ${valorProducto - (valorProducto * (1 * 0.05))}`)
+        let valorProducto = parseInt(prompt("ingrese el valor del producto"))
+        alert(`producto ${i} - descuento aplicado: ${i * 5} %   
+            \nValor final: ${valorProducto - (valorProducto * (i * 0.05))}`)
 
 }
 }
