@@ -1,47 +1,92 @@
 
-    let hamburguesaEspecial = {
+let hamburguesaEspecial = {
 
-        pan: "Pan brioche",
+    pan: "Pan brioche",
 
-        carne: "Pollo crujiente",
+    carne: "Pollo crujiente",
 
-        queso: "Suizo",
+    queso: "Suizo",
 
-        extras: [
+    extras: [
 
-            "Lechuga",
+        "Lechuga",
 
-            "Pepinos",
+        "Pepinos",
 
-            "Miel"
+        "Miel"
 
-        ],
+    ],
 
-        mostrarIngredientes:function() {
+    mostrarIngredientes: function () {
 
-            console.log("Pan:", this.pan);
+        console.log("Pan:", this.pan);
 
-            console.log("Carne:", this.carne);
+        console.log("Carne:", this.carne);
 
-            console.log("Queso:", this.queso);
+        console.log("Queso:", this.queso);
 
-            console.log(
+        console.log(
 
-                "Extras:",
+            "Extras:",
 
-                this.extras.join(", ")
+            this.extras.join(", ")
 
-            );
+        );
 
-        }
+    }
 
-    };
+};
 
-    // DESAFIO acceder al pan
-    console.log (hamburguesaEspecial.pan)
+// DESAFIO acceder al pan
+console.log(hamburguesaEspecial.pan)
 
-    hamburguesaEspecial.mostrarIngredientes()
+hamburguesaEspecial.mostrarIngredientes()
 
-    //objeto con metodo automovil
+//objeto con
+//Objeto con metodo automovil>
+let automovil = {
 
-    
+    auto: "Honda civic",
+
+    modelo: "EJ1 Coupé (1993)",
+
+    Motor: "Spoon Engines",
+
+    Turbo: "T66 Turbo",
+
+    OxidoNitroso: "NOS",
+
+    Escape: "Motec system exhaust",
+
+    extras: [
+
+        "Wings West",
+
+        "Aleron aluminio estilo R33 GT-R",
+
+        "Neon de bajo de los chasis color verde fosforescente",
+
+        "Llantas Axis Se7ven de 17 o 18 pulgadas",
+
+        "Suspensión TEIN Flex Z / Street Advance Z"
+    ],
+
+
+    piezasdeauto: function () {
+
+        alert(`Auto: ${this.auto}
+Motor: ${this.Motor}
+Modelo: ${this.modelo}
+Turbo: ${this.Turbo}
+Oxido De Nitroso: ${this.OxidoNitroso}
+Escape: ${this.Escape}
+Extras: ${this.extras.join("\n")}`);
+
+
+
+    }
+};
+
+automovil.piezasdeauto()
+
+
