@@ -1,6 +1,17 @@
 document.getElementById("colorButton").addEventListener("click", function () {
     cambiarColor();
+    
 });
+document.getElementById("colorButton2").addEventListener("click", function () {
+    cambiarColor();
+    
+});
+document.getElementById("colorButton3").addEventListener("click", function () {
+    cambiarColor();
+    
+});
+
+
 
 // Función que cambia el color de fondo al hacer clic
 function cambiarColor() {
