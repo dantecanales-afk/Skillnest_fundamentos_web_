@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Dante Canales">
+    <meta name="author" content="Dante Canales">
     <link rel="stylesheet" href="static/css/style.css">
-    <title>perfil pro</title>
+    <title>Perfil</title>
+</head>
+
 <body>
-    <header>
-        <nav>
-            <h1>Perfil</h1>
-            <ul>
-                <li>Inicio</li>
-                <li>Mi perfil</li>
-                <li>Conexiones</li>
-                <li><button>Cerrar sesión</button></li>
-            </ul>
-        </nav>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-brand">Perfil</h1>
+            <nav class="navbar-menu">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Mi perfil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Conexiones</a></li>
+                    <li class="nav-item"><button class="btn-logout">Cerrar sesión</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class="contenedor-principal">
-        <section class="tarjeta">
-            <div class="portada"></div>
-            <div class="datos">
-                <img class="avatar" src="static/img/Captura de pantalla 2026-05-27 154151.png" alt="Foto de perfil">
-                <h2>Dante Canales</h2>
-                <p class="ubicacion">Bergen, Noruega</p>
-                <p>Desarrollador Frontend</p>
-                <p>Conocimientos en HTML, CSS y JavaScript</p>
-                <a href="#">Editar perfil</a>
+
+    
+    <main class="main-layout">
+        
+      
+        <section class="card-profile">
+            <div class="profile-banner"></div>
+            <div class="profile-body">
+              <img class="profile-avatar" src="static/img/Captura de pantalla 2026-05-27 154151.png" alt="Foto de perfil">
+                <h2 class="profile-name">Dante Canales</h2>
+                <p class="profile-location">Bergen, Noruega</p>
+                <p class="profile-title">Desarrollador Frontend</p>
+          <p class="profile-bio">Conocimientos en HTML, CSS y JavaScript</p>
+                <a href="#" class="profile-edit-link">⚙ Editar perfil</a>
             </div>
         </section>
 
-        <aside class="panel">
-            <div class="caja">
-                <div class="encabezado">
-                    <h3>Solicitudes de conexión</h3>
-                    <button>Ver todas</button>
+        <aside class="sidebar">
+            
+            
+            <div class="sidebar-card">
+            <div class="sidebar-header">
+                    <h3 class="sidebar-title">Solicitudes de conexión</h3>
+            <button class="btn-outline">Ver todas</button>
                 </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span>Steve Jobs</span>
-                    <img src="static/img/check-X.png" alt="">
-                </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span> Bill Gates</span>
-                    <img src="static/img/check-X.png" alt="">
-                </div>
+                
+                <ul class="connection-list">
+                    <li class="connection-item">
+                    <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Steve Jobs">
+                        <span class="user-name">Steve Jobs</span>
+                       <div class="action-icons">
+                           <img class="icon-action" src="static/img/check-X.png" alt="Aceptar">
+                        </div>
+                    </li>
+                    <li class="connection-item">
+                        <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Bill Gates">
+                        <span class="user-name">Bill Gates</span>
+                        <div class="action-icons">
+                            <img class="icon-action" src="static/img/check-X.png" alt="Aceptar">
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="caja">
-                <div class="encabezado">
-                    <h3>Tus conexiones</h3>
-                    <button>Ver todas</button>
+
+            
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <h3 class="sidebar-title">Tus conexiones</h3>
+                    <button class="btn-outline">Ver todas</button>
                 </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span>Richard Stallman</span>
-                </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span>Linus Torvalds</span>
-                </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span>Ada Lovelace</span>
-                </div>
-                <div class="persona">
-                    <img src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="">
-                    <span>Grace Hopper</span>
-                </div>
+                <ul class="connection-list">
+                    <li class="connection-item">
+                        <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Richard Stallman">
+                        <span class="user-name">Richard Stallman</span>
+                    </li>
+                    <li class="connection-item">
+                        <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Linus Torvalds">
+                        <span class="user-name">Linus Torvalds</span>
+                    </li>
+                    <li class="connection-item">
+                        <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Ada Lovelace">
+                        <span class="user-name">Ada Lovelace</span>
+                    </li>
+                    <li class="connection-item">
+                        <img class="user-avatar" src="static/img/blank-avatar-photo-place-holder-600nw-1095249842.webp" alt="Grace Hopper">
+                        <span class="user-name">Grace Hopper</span>
+                    </li>
+                </ul>
             </div>
+
         </aside>
     </main>
 </body>
+
 </html>

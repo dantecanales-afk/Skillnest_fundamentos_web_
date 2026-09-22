@@ -1,74 +1,106 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-
+/* Reset básico y fuente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-body{
-background-color: #eceff1;
+/* Centrar en pantalla */
+body {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-
-.tarjeta{
-width: 600px;
-height: 350px;
-overflow: hidden;
-border-radius: 8px;
-background-color: white;
-box-shadow: 0px 2px 5px rgba(0,0,0,.2);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-left: 27%;
-margin-top: 100px;
-
+/* Contenedor principal */
+.tarjeta {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding-top: 60px;
+    margin-top: 60px;
 }
 
-.portada{
-    box-shadow: none;
-height: 100px;
-background-color: #eceff1;
+/* Contenedor de datos */
+.datos {
+    padding: 20px 25px 30px 25px;
+    text-align: center;
 }
 
-.datos{
-position: relative;
-text-align: center;
-padding: 70px 20px 20px;
+/* Avatar circular */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.avatar{
-height: 110px;
-width: 100px;
-border-radius: 50%;
-position: absolute;
-top: -50px;
-left: 50%;
-transform: translateX(-50%);
+/* Nombre */
+.datos h2 {
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.datos h2{
-margin-bottom: 10px;
+/* Ubicación / Subtítulo */
+.ubicacion {
+    color: #777777;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 12px;
 }
 
-.datos p{
-margin-bottom: 5px;
+/* Parrafos de descripción */
+.datos p:not(.ubicacion) {
+    color: #555555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
 }
 
-.datos a{
-color: #3498db;
-text-decoration: none;
-margin-left: 5px;
-margin-right: 5px;
-
+/* Enlaces normales (Contacto, info, Correo) */
+.datos a {
+    color: #0000ff;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 12px 8px 0 8px;
+    display: inline-block; /* <-- Esto hace que se pongan uno al lado del otro */
 }
 
-.datos a:hover{
-text-decoration: underline;
+.datos a:hover {
+    color: #0000a0;
 }
 
-.ubicacion{
-color: grey;
+/* Botón principal (Ubicación / Conectar) */
+.datos a:last-child {
+    display: block; /* Va en su propia línea abajo */
+    width: fit-content;
+    margin: 16px auto 0 auto;
+    background-color: #3b9cd8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
 }
 
+.datos a:last-child:hover {
+    background-color: #2b88c4;
+}

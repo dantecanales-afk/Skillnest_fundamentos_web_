@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F1F2F6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #A29BFE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 12%;
+    color: white;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input {
+    border-radius: 20px;
+    width: 420px;
+    border: none;
+    padding: 10px 18px;
+    outline: none;
+    font-size: 14px;
+}
+
+.iniciarsesión {
+    border-radius: 20px;
+    padding: 8px 22px;
+    color: white;
+    background-color: #6C5CE7;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+/* Envoltorio de las publicaciones (columna izquierda) */
+.fundamentosJS, .diseñaCSS {
+    padding: 0;
+    width: 100%;
+}
+
+/* Columna de tarjetas principales */
+.caja, .caja1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.473);
+    padding: 25px;
+    width: 100%;
+}
+
+.caja h1, .caja1 h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Botones Me Gusta */
+.megusta1, .megusta2 {
+    background-color: #FF7675;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Sección Bienvenido (columna derecha) */
+.Bienvenido {
+    padding: 0;
+    min-width: 320px;
+}
+
+.caja2 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.493);
+    padding: 25px 20px;
+}
+
+.caja2 h2 {
+    font-size: 20px;
+}
+
+.verPerfil {
+    color: white;
+    background-color: #00CEC9;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}

@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*navbar*/
+.inicio {
+    background-color: rgb(63, 63, 63);
+}
+
+.navbar {
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+/*navbar*/
+
+/*perfil*/
+.imagen img {
+    height: 155px;
+    border-radius: 50%;
+}
+
+.perfil {
+    border: solid 2px black;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 30px 20px 30px;
+    margin: 90px;
+}
+
+.btn {
+    background-color: rgb(0, 167, 198);
+    border: none;
+    width: 100px;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*perfil*/
+
+/*publicaciones*/
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.publicaciones {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*tralalero*/
+.tralalero {
+    border: solid 2px black;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.botons1 {
+    background-color: #ffce69;
+    border: none;
+    width: 65px;
+    height: 20px;
+    border-radius: 3px;
+    cursor:  pointer;
+    transition: 0.5s;
+}
+.botons1:hover{
+    background-color: #665025;
+    color: white;
+}
+
+.tralali {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.liike {
+    display: flex;
+    gap: 5px;
+}
+.tralalero a{
+    color: #551977;
+}
+
+/*tralalero*/
+
+
+/*tricktrack*/
+.tricktrack {
+    border: solid 2px black;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.trickibum {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*tricktrack*/
+
+
+/*brr patapim*/
+.brrpatapim {
+    border: solid 2px black;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+}
+.brpata{
+        display: flex;
+    justify-content: space-between;
+}
+
+/*brr patapim*/
