@@ -1,114 +1,96 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.header{
+    color: white;
 
-.header {
-    background-color: #173353;
-    color: #FFFFFF;
     text-align: center;
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 150px;
-}
-
-.menu {
-    margin-top: 25px;
-    height: 50px;
-    background-color: #204875;
-    text-align: center;
-
-}
-
-.boton {
-    display: inline-block;
-
-
-
-
-
-
-
-
     
-    color: #E7EBF0;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    width: 200px;
 }
 
-.contenedor_principal {
-    padding: 30px 50px;
-}
-
-.contenedor_tarjetas {
-    text-align: center;
-    padding: 20px;
-}
-
-.box {
-    display: inline-block;
-    text-align: center;
-    height: 150px;
-    width: 300px;
-    background-color: #00A4DE;
-    color: #FCFEFF;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.bloque {
-    display: block;
-    background-color: #204875;
-    color: #F7F9FA;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-
-}
-
-.titulo_de_bloque {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.parrafo1 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 20px;
-}
-
-.parrafo_principal {
-    padding-top: 10px;
-}
-
-.titulo {
+.titulo{
+    font-size: 50px;
     padding-top: 30px;
 }
 
-.parrafo_caja {
-    padding-bottom: 5px;
-    padding-top: 10px;
+.button{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    padding: 8px;
+
+}
+.menu{
+    background-color: #2C5282;
 }
 
-.titulo_caja {
-    padding: 15px;
+.azulFondo{
+    background-color: #1E3A5F;
 }
 
-.la_caja_blanca {
+.parrafo{
     padding: 30px;
-    height: 400px;
+    font-size: 13px;
+}
 
-    width: 1200px;
-    margin-left: 35px;
-    box-shadow: 5px 5px 40px -9px;
-    margin-top: 20px;
-    border-radius: 15px;
+.contenedor_principal{
+    margin-top: 60px;
+    text-align: center;
+
+
+}
+
+.box_externa{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: rgb(209, 203, 203) 2px 2px 2px 2px;
+}
+
+.box{
+    padding: 30px;
+    display: inline-block;
+    background-color: #1E3A5F;
+    height: 150px;
+    width: 1300px;
+    color: white;
+    border-radius: 7px;
+}
+
+.parrafo2{
+    padding: 30px;
+}
+
+.cajas{
+    text-align: center;
+    padding: 20px;
+}
+
+.box1{
+    display: inline-block;
+    width: 350px;
+    height: 120px;
+    background-color: #00ADE5;
+    color: white;
+    border-radius: 7px;
+    padding: 40px;
+    margin: 5px;
+    
+}
+
+.titulo_box{
+    font-size: medium;
+    padding-bottom: 15px;
+    margin: auto;
+}
+
+.parrafo_box{
+    font-size: small;
+
 }
