@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía JS pal examen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hoja">
+
+<marquee>★ ★ ★ BIENVENIDOS A LA GUÍA DE JAVASCRIPT PAL EXAMEN ★ ★ ★ TÚ PUEDES ★ ★ ★</marquee>
+
+<h1>~ Repaso de JavaScript ~<br>pal examen de certificación</h1>
+
+<center>🖥️ 💾 📟 🕹️</center>
+
+<p>Ya, cabros, tranquilos. Para el examen de certificación, en JavaScript solo nos tenemos que aprender <b>5 cosas</b>, que están en los CORES. Nada más. Les armé esta guía para que la tengan a mano, la lean con calma y prueben todo acá mismo.</p>
+
+<p>Los 5 contenidos importantes son:</p>
+<ol>
+  <li>Contadores usando un botón (en el mismo botón = fácil, o en otro elemento = medio)</li>
+  <li>Cambiar propiedades de un elemento del DOM: color, value, tamaño y display</li>
+  <li>Eliminar un elemento de la página al apretar un botón</li>
+  <li>Leer un input / barra de búsqueda / select y mostrar en una alerta lo que eligió el cliente</li>
+  <li>Cambiar el <code>src</code> de las imágenes</li>
+</ol>
+
+<p><b>Con estas 5 cosas pueden hacer el examen sin drama.</b> En serio.</p>
+
+<hr>
+
+<h2>⭐ Antes de partir: la receta mágica</h2>
+
+<p>Fíjense que <b>TODOS</b> los ejercicios se hacen con los mismos 3 pasos. Si se aprenden esto, tienen el 80% listo:</p>
+
+<ol>
+  <li><b>Seleccionar</b> el elemento HTML con <code>document.querySelector()</code> y guardarlo en una variable.</li>
+  <li><b>Escuchar</b> cuando pase algo (un click, pasar el mouse) con <code>addEventListener()</code>.</li>
+  <li><b>Hacer el cambio</b> que nos piden adentro de la función.</li>
+</ol>
+
+<pre>// PASO 1: seleccionar (el # es porque buscamos por id)
+const miBoton = document.querySelector("#miBoton");
+
+// PASO 2: escuchar el click
+miBoton.addEventListener("click", function () {
+
+  // PASO 3: aquí adentro va lo que queremos que pase
+  
+});</pre>
+
+<div class="ojo">
+  ⚠️ <b>OJO:</b> el <code>&lt;script&gt;</code> va al <b>final del body</b>, justo antes de <code>&lt;/body&gt;</code>. Si lo ponen arriba, el JavaScript se lee antes que el HTML exista y el querySelector no encuentra nada (les va a dar <code>null</code> y error).
+</div>
+
+<hr>
+
+<!-- ============================ PARTE 1 ============================ -->
+<h2>1) Contadores con botón</h2>
+
+<h3>1.A — Contador en el mismo botón (fácil)</h3>
+
+<p>La idea: cada vez que aprieto el botón, el número que está <b>dentro del botón</b> sube en 1.</p>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;button id="btnContador"&gt;0&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Creamos una variable que parte en 0.
+//    Aquí vamos a ir guardando cuántos clicks van.
+//    Usamos "let" y no "const" porque este número VA A CAMBIAR.
+let contador = 0;
+
+// 2. Con esta línea hacemos una variable que va a contener
+//    el botón del HTML, y lo seleccionamos usando querySelector.
+//    El # significa "búscalo por su id".
+const btnContador = document.querySelector("#btnContador");
+
+// 3. Le decimos al botón: "cuando te hagan click, haz esto".
+btnContador.addEventListener("click", function () {
+
+  // 4. Le sumamos 1 al contador.
+  //    (también se puede escribir contador++ , es lo mismo)
+  contador = contador + 1;
+
+  // 5. Escribimos el número nuevo DENTRO del mismo botón.
+  //    innerText cambia el texto que está adentro del elemento.
+  btnContador.innerText = contador;
+});</pre>
+
+<div class="demo">
+  <button id="btnContador">0</button>
+</div>
+
+<h3>1.B — Contador en otro elemento (medio)</h3>
+
+<p>Ahora el botón está por un lado y el número aparece en <b>otro elemento</b> (un párrafo). La única diferencia es que tenemos que seleccionar <b>dos cosas</b>: el botón y el párrafo.</p>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;p id="numero"&gt;0&lt;/p&gt;
+&lt;button id="btnSumar"&gt;Sumar +1&lt;/button&gt;
+&lt;button id="btnRestar"&gt;Restar -1&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. La variable que guarda el número, parte en 0.
+let cuenta = 0;
+
+// 2. Seleccionamos el párrafo donde se va a MOSTRAR el número.
+const numero = document.querySelector("#numero");
+
+// 3. Seleccionamos los dos botones.
+const btnSumar = document.querySelector("#btnSumar");
+const btnRestar = document.querySelector("#btnRestar");
+
+// 4. Cuando hacen click en "Sumar"...
+btnSumar.addEventListener("click", function () {
+  // ...le sumamos 1 a la cuenta
+  cuenta = cuenta + 1;
+  // ...y lo mostramos en el PÁRRAFO (no en el botón)
+  numero.innerText = cuenta;
+});
+
+// 5. Lo mismo pero restando.
+btnRestar.addEventListener("click", function () {
+  cuenta = cuenta - 1;
+  numero.innerText = cuenta;
+});</pre>
+
+<div class="demo">
+  <p id="numero" style="font-size: 30px; font-weight: bold;">0</p>
+  <button id="btnSumar">Sumar +1</button>
+  <button id="btnRestar">Restar -1</button>
+</div>
+
+<div class="tip">
+  💡 <b>Tip:</b> Fíjense que es EXACTAMENTE lo mismo que el 1.A. Lo único que cambia es <b>dónde</b> escribimos el número. Si en el examen les dicen "muestra el contador en un span", es igual, solo seleccionan el span.
+</div>
+
+<hr>
+
+<!-- ============================ PARTE 2 ============================ -->
+<h2>2) Cambiar propiedades de un elemento</h2>
+
+<p>Aquí nos pueden pedir cambiar 4 cosas: <b>color</b>, <b>value</b>, <b>tamaño</b> y <b>display</b>. Casi todo se cambia con <code>.style</code>, menos el value.</p>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;h3 id="titulo"&gt;Soy un título común y corriente&lt;/h3&gt;
+&lt;button id="btnColor"&gt;Cambiar color&lt;/button&gt;
+&lt;button id="btnTamano"&gt;Hacer grande&lt;/button&gt;
+
+&lt;input type="text" id="nombre" placeholder="escribe algo..."&gt;
+&lt;button id="btnValue"&gt;Cambiar value&lt;/button&gt;
+
+&lt;p id="secreto"&gt;🙈 Soy un párrafo que se esconde&lt;/p&gt;
+&lt;button id="btnOcultar"&gt;Mostrar / Ocultar&lt;/button&gt;</pre>
+
+<h3>2.A — Color</h3>
+<pre>// Seleccionamos el título que queremos cambiar.
+const titulo = document.querySelector("#titulo");
+// Seleccionamos el botón que va a hacer el cambio.
+const btnColor = document.querySelector("#btnColor");
+
+btnColor.addEventListener("click", function () {
+  // .style nos deja meternos al CSS del elemento desde JS.
+  // .color es el color de la LETRA.
+  titulo.style.color = "red";
+
+  // Si les piden el color de FONDO, es así:
+  titulo.style.backgroundColor = "yellow";
+});</pre>
+
+<div class="ojo">
+  ⚠️ <b>OJO:</b> en CSS se escribe <code>background-color</code> con guión, pero en JavaScript se escribe <code>backgroundColor</code> todo junto y con la C mayúscula. Lo mismo con <code>font-size</code> → <code>fontSize</code>.
+</div>
+
+<h3>2.B — Tamaño</h3>
+<pre>const btnTamano = document.querySelector("#btnTamano");
+
+btnTamano.addEventListener("click", function () {
+  // fontSize cambia el tamaño de la letra.
+  // IMPORTANTE: hay que ponerle la unidad ("px"), si no, no funciona.
+  titulo.style.fontSize = "40px";
+
+  // Si fuera una imagen o una caja, sería width o height:
+  // imagen.style.width = "300px";
+});</pre>
+
+<h3>2.C — Value (el texto de un input)</h3>
+<pre>const nombre = document.querySelector("#nombre");
+const btnValue = document.querySelector("#btnValue");
+
+btnValue.addEventListener("click", function () {
+  // .value es lo que está ESCRITO dentro del input.
+  // Ojo que aquí NO va .style, porque value no es CSS.
+  nombre.value = "Hola profe, me saqué un 7";
+});</pre>
+
+<h3>2.D — Display (mostrar y ocultar)</h3>
+<pre>const secreto = document.querySelector("#secreto");
+const btnOcultar = document.querySelector("#btnOcultar");
+
+btnOcultar.addEventListener("click", function () {
+  // Preguntamos: ¿el párrafo está escondido?
+  if (secreto.style.display === "none") {
+    // si está escondido, lo mostramos
+    secreto.style.display = "block";
+  } else {
+    // si se ve, lo escondemos
+    secreto.style.display = "none";
+  }
+});</pre>
+
+<div class="tip">
+  💡 <b>¿Por qué pregunto primero si es "none"?</b> Porque al principio <code>secreto.style.display</code> está vacío (<code>""</code>), no dice "block". Si preguntan al revés (<code>=== "block"</code>), el primer click no les va a hacer nada y van a pensar que está malo. Si solo les piden <b>ocultar</b> (sin volver a mostrar), basta con <code>secreto.style.display = "none";</code> y listo.
+</div>
+
+<div class="demo">
+  <h3 id="titulo" style="text-decoration: none;">Soy un título común y corriente</h3>
+  <button id="btnColor">Cambiar color</button>
+  <button id="btnTamano">Hacer grande</button>
+  <br><br>
+  <input type="text" id="nombre" placeholder="escribe algo...">
+  <button id="btnValue">Cambiar value</button>
+  <br><br>
+  <p id="secreto">🙈 Soy un párrafo que se esconde</p>
+  <button id="btnOcultar">Mostrar / Ocultar</button>
+</div>
+
+<hr>
+
+<!-- ============================ PARTE 3 ============================ -->
+<h2>3) Eliminar un elemento con un botón</h2>
+
+<p>Esta es la más corta de todas, se los juro. Existe un método que se llama <code>.remove()</code> y hace exactamente lo que dice: borra el elemento de la página.</p>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;div id="caja"&gt;📦 Bórrame si te atreves&lt;/div&gt;
+&lt;button id="btnEliminar"&gt;Eliminar caja&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Seleccionamos el elemento que queremos borrar.
+const caja = document.querySelector("#caja");
+
+// 2. Seleccionamos el botón.
+const btnEliminar = document.querySelector("#btnEliminar");
+
+// 3. Cuando hagan click...
+btnEliminar.addEventListener("click", function () {
+  // ...borramos la caja. Chao, se fue, no existe más.
+  caja.remove();
+});</pre>
+
+<div class="demo">
+  <div id="caja" class="caja-eliminar">📦 Bórrame si te atreves</div>
+  <button id="btnEliminar">Eliminar caja</button>
+  <p><small>(si la borraste y la quieres de vuelta, recarga la página 😅)</small></p>
+</div>
+
+<div class="ojo">
+  ⚠️ <b>OJO:</b> no confundan <code>remove()</code> con <code>display = "none"</code>. El display la <b>esconde</b> (sigue ahí, pero no se ve). El remove la <b>elimina</b> de verdad. Si el examen dice "eliminar", usen <code>remove()</code>.
+</div>
+
+<hr>
+
+<!-- ============================ PARTE 4 ============================ -->
+<h2>4) Leer un input / búsqueda / select y mostrarlo en una alerta</h2>
+
+<p>Aquí la clave es una sola palabra: <b><code>.value</code></b>. Con eso leemos lo que el cliente escribió o eligió. Da lo mismo si es un input de texto, una barra de búsqueda o un select: <b>todos se leen con .value</b>.</p>
+
+<h3>4.A — Barra de búsqueda</h3>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;input type="search" id="buscador" placeholder="¿Qué buscas?"&gt;
+&lt;button id="btnBuscar"&gt;Buscar&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Seleccionamos la barra de búsqueda.
+const buscador = document.querySelector("#buscador");
+
+// 2. Seleccionamos el botón.
+const btnBuscar = document.querySelector("#btnBuscar");
+
+// 3. Cuando hagan click en buscar...
+btnBuscar.addEventListener("click", function () {
+
+  // 4. Leemos lo que el cliente escribió con .value
+  //    y lo guardamos en una variable.
+  //    OJO: esto va ADENTRO de la función, porque queremos
+  //    leer lo que hay escrito EN EL MOMENTO del click.
+  const textoBuscado = buscador.value;
+
+  // 5. Mostramos la alerta juntando texto + la variable.
+  alert("Buscaste: " + textoBuscado);
+});</pre>
+
+<div class="demo">
+  <input type="search" id="buscador" placeholder="¿Qué buscas?">
+  <button id="btnBuscar">Buscar</button>
+</div>
+
+<h3>4.B — Select (lista desplegable)</h3>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;select id="selectComida"&gt;
+  &lt;option value="completo"&gt;Completo&lt;/option&gt;
+  &lt;option value="empanada"&gt;Empanada&lt;/option&gt;
+  &lt;option value="sopaipilla"&gt;Sopaipilla&lt;/option&gt;
+&lt;/select&gt;
+&lt;button id="btnElegir"&gt;Elegir&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Seleccionamos el select.
+const selectComida = document.querySelector("#selectComida");
+
+// 2. Seleccionamos el botón.
+const btnElegir = document.querySelector("#btnElegir");
+
+// 3. Cuando hagan click...
+btnElegir.addEventListener("click", function () {
+
+  // 4. Leemos la opción elegida. Es IGUAL que el input: .value
+  //    Nos devuelve lo que dice el value="" de la opción elegida.
+  const comidaElegida = selectComida.value;
+
+  // 5. Otra forma de juntar texto con variables: con comillas
+  //    invertidas `` y ${}. Hace lo mismo que el +, úsenla si les acomoda.
+  alert(`Elegiste: ${comidaElegida}. ¡Buena elección!`);
+});</pre>
+
+<div class="demo">
+  <select id="selectComida">
+    <option value="completo">Completo</option>
+    <option value="empanada">Empanada</option>
+    <option value="sopaipilla">Sopaipilla</option>
+  </select>
+  <button id="btnElegir">Elegir</button>
+</div>
+
+<div class="ojo">
+  ⚠️ <b>ERROR TÍPICO:</b> leer el <code>.value</code> <b>afuera</b> de la función. Si hacen <code>const texto = buscador.value;</code> arriba del addEventListener, se lee cuando carga la página (cuando está vacío) y la alerta siempre va a salir vacía. <b>El .value se lee adentro del click.</b>
+</div>
+
+<hr>
+
+<!-- ============================ PARTE 5 ============================ -->
+<h2>5) Cambiar el src de una imagen</h2>
+
+<p>El <code>src</code> es la "dirección" de la imagen, o sea, de dónde la saca. Si le cambiamos el src, cambia la foto. Así de simple.</p>
+
+<h3>5.A — Cambiar la imagen con un botón</h3>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;img id="foto" src="img/dia.svg" alt="dibujo" width="200"&gt;
+&lt;button id="btnCambiar"&gt;Cambiar imagen&lt;/button&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Seleccionamos la imagen.
+const foto = document.querySelector("#foto");
+
+// 2. Seleccionamos el botón.
+const btnCambiar = document.querySelector("#btnCambiar");
+
+// 3. Cuando hagan click...
+btnCambiar.addEventListener("click", function () {
+  // 4. Le cambiamos el src por la ruta de la otra imagen.
+  //    La ruta se escribe igual que en el HTML, entre comillas.
+  foto.src = "img/noche.svg";
+});</pre>
+
+<div class="demo">
+  <img id="foto" src="img/dia.svg" alt="dibujo del día" width="200">
+  <br>
+  <button id="btnCambiar">Cambiar imagen</button>
+</div>
+
+<h3>5.B — Cambiar la imagen al pasar el mouse (hover con JS)</h3>
+
+<p>Esto es lo mismo, pero en vez de escuchar un <code>"click"</code>, escuchamos dos eventos distintos:</p>
+<ul>
+  <li><code>"mouseover"</code> → cuando el mouse <b>entra</b> a la imagen</li>
+  <li><code>"mouseout"</code> → cuando el mouse <b>sale</b> de la imagen</li>
+</ul>
+
+<p><b>El HTML:</b></p>
+<pre>&lt;img id="fotoHover" src="img/triste.svg" alt="carita" width="200"&gt;</pre>
+
+<p><b>El JavaScript, paso a paso:</b></p>
+<pre>// 1. Seleccionamos la imagen. Aquí NO hay botón,
+//    la imagen misma es la que escucha.
+const fotoHover = document.querySelector("#fotoHover");
+
+// 2. Cuando el mouse ENTRA a la imagen, ponemos la carita feliz.
+fotoHover.addEventListener("mouseover", function () {
+  fotoHover.src = "img/feliz.svg";
+});
+
+// 3. Cuando el mouse SALE, volvemos a la original.
+//    Si no hacemos este paso, se queda pegada en la feliz.
+fotoHover.addEventListener("mouseout", function () {
+  fotoHover.src = "img/triste.svg";
+});</pre>
+
+<div class="demo">
+  <p>Pasa el mouse por encima 👇 (en el celu, tócala)</p>
+  <img id="fotoHover" src="img/triste.svg" alt="carita" width="200">
+</div>
+
+<div class="tip">
+  💡 <b>Nota:</b> las imágenes de esta guía están en la carpeta <code>img/</code>. En el examen el src va a ser la ruta de su imagen, tipo <code>"img/perro.jpg"</code> o <code>"./assets/gato.png"</code>. <b>Revisen bien la ruta</b>: si la carpeta se llama "imagenes" y ustedes escriben "img", no va a aparecer nada.
+</div>
+
+<hr>
+
+<!-- ============================ CHECKLIST ============================ -->
+<h2>✅ Checklist antes de entregar el examen</h2>
+
+<p>Si algo no les funciona, antes de entrar en pánico revisen esto (el 90% de los errores es alguno de estos):</p>
+
+<ol>
+  <li>¿Pusieron el <b>#</b> en el querySelector? Es <code>querySelector("#miId")</code>, no <code>querySelector("miId")</code>. Si es una clase, es con punto: <code>".miClase"</code>.</li>
+  <li>¿El id del HTML está escrito <b>exactamente igual</b> que en el JS? Mayúsculas y minúsculas importan: <code>btnSumar</code> no es lo mismo que <code>btnsumar</code>.</li>
+  <li>¿El <code>&lt;script&gt;</code> está al final del body?</li>
+  <li>¿El evento está bien escrito? Es <code>"click"</code>, no <code>"onclick"</code> ni <code>"Click"</code>.</li>
+  <li>¿Los valores de CSS llevan su unidad? <code>"40px"</code>, no <code>40</code>.</li>
+  <li>¿El <code>.value</code> lo leyeron <b>adentro</b> de la función?</li>
+  <li>Abran la consola (F12 → Console). Si hay algo en rojo, ahí les dice en qué línea está el error. <b>Léanlo</b>, no muerde.</li>
+</ol>
+
+<hr>
+
+<center>
+  <p style="font-family: 'Comic Sans MS', cursive; font-size: 22px; color: var(--rojo);">
+    🎉 ¡Eso es todo! 🎉
+  </p>
+  <p>Son 5 cosas y todas usan la misma receta: <b>seleccionar → escuchar → cambiar</b>.<br>
+  Practiquen cada una un par de veces escribiéndola ustedes (no copiando) y llegan listos.<br>
+  <b>Ustedes pueden. Nos vemos en el examen. 💪</b></p>
+  <p><small>Mejor visto en Netscape Navigator 4.0 a 800x600 😎</small></p>
+</center>
+
+</div>
+
+<!-- ============================================================
+     EL SCRIPT VA AL FINAL DEL BODY (¿vieron? como les dije)
+     Todo el JavaScript está en el archivo script.js
+     ============================================================ -->
+<script src="script.js"></script>
+</body>
+</html>

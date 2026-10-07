@@ -11,7 +11,7 @@ let buttonn = document.querySelector("#botons2")
 let contador2 = 0
 buttonn.addEventListener("click", function () {
     contador2++
-    megustaa.innerText = contador2
+    megustaa.innerText = contador2  
 })
 
 let megustaaa = document.querySelector("#like3")
@@ -20,5 +20,13 @@ let contador3 = 0
 buttonnn.addEventListener("click", function () {
     contador3++
     megustaaa.innerText = contador3
+})
+
+let megustaaaa = document.querySelector("#like4")
+let buttonnnn = document.querySelector("#botons4")
+let contador4 = 0
+buttonnn.addEventListener("click", function () {
+    contador4++
+    megustaaaa.innerText = contador4
 })
 

@@ -1,0 +1,110 @@
+/* Estilos noventeros de la guía. Mientras más penca, mejor 😎 */
+
+:root {
+  --fondo: #008080;
+  --papel: #ffffcc;
+  --texto: #000000;
+  --titulo: #000080;
+  --rojo: #cc0000;
+  --codigo-fondo: #000000;
+  --codigo-texto: #00ff00;
+  --gris: #c0c0c0;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+/* en modo oscuro lo dejamos igual de penca, es parte del encanto */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --fondo: #004040; }
+}
+:root[data-theme="dark"] { --fondo: #004040; }
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 20px 10px;
+}
+.hoja {
+  background: var(--papel);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 6px ridge var(--gris);
+}
+h1 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: var(--rojo);
+  text-align: center;
+  font-size: 34px;
+  margin: 10px 0;
+}
+h2 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: var(--titulo);
+  background: var(--gris);
+  border: 3px outset #ffffff;
+  padding: 5px 10px;
+  margin-top: 50px;
+}
+h3 { color: var(--titulo); text-decoration: underline; }
+hr { border: 0; border-top: 3px dashed var(--rojo); margin: 40px 0; }
+pre {
+  background: var(--codigo-fondo);
+  color: var(--codigo-texto);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding: 12px;
+  border: 4px inset var(--gris);
+  overflow-x: auto;
+  line-height: 1.4;
+}
+.demo {
+  background: #ffffff;
+  border: 3px dotted var(--titulo);
+  padding: 15px;
+  margin: 15px 0;
+}
+.demo::before {
+  content: "👉 PRUÉBALO AQUÍ:";
+  display: block;
+  font-weight: bold;
+  color: var(--rojo);
+  margin-bottom: 10px;
+}
+.ojo {
+  background: #ffcccc;
+  border: 2px solid var(--rojo);
+  padding: 10px;
+  margin: 15px 0;
+}
+.tip {
+  background: #ccffcc;
+  border: 2px solid green;
+  padding: 10px;
+  margin: 15px 0;
+}
+button {
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  background: var(--gris);
+  border: 3px outset #ffffff;
+  padding: 4px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+button:active { border-style: inset; }
+input, select { font-size: 16px; margin: 5px; padding: 3px; }
+img { max-width: 100%; border: 3px solid black; margin: 5px; }
+.caja-eliminar {
+  background: yellow;
+  border: 3px solid black;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+marquee { color: var(--rojo); font-weight: bold; font-size: 18px; }
+ul li, ol li { margin-bottom: 6px; }
